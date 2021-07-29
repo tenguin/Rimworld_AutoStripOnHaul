@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- ***** Defs\RecipeDefs\Recipes_Cremation.xml **********************************************************-->
+  <!--Modify burn weapon/apparel recipes to not include smeltables-->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/RecipeDef[defName="BurnApparel" or defName="BurnWeapon"]/forceHiddenSpecialFilters</xpath>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="BurnApparel"]</xpath>
+    <value>
+      <forceHiddenSpecialFilters>
+        <li>AllowBurnableApparel</li>
+        <li>AllowNonSmeltableApparel</li>
+      </forceHiddenSpecialFilters>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="BurnWeapon"]</xpath>
+    <value>
+      <forceHiddenSpecialFilters>
+        <li>AllowBurnableWeapons</li>
+        <li>AllowNonSmeltableWeapons</li>
+      </forceHiddenSpecialFilters>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="BurnApparel"]/fixedIngredientFilter/specialFiltersToDisallow</xpath>
+    <value>
+      <li>AllowSmeltableApparel</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/RecipeDef[defName="BurnWeapon"]/fixedIngredientFilter/specialFiltersToDisallow</xpath>
+    <value>
+      <li>AllowSmeltable</li>
+    </value>
+  </Operation>
+</Patch>

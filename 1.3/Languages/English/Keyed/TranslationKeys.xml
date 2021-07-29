@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <AutoStripOnHaul_Title>Fuu's Auto Strip on Haul</AutoStripOnHaul_Title>
+  <AutoStripOnHaul_SettingsDescription>Your pawns will automatically strip corpses of their weapons, useable equipment (ie: belts, grenades, utility), and smeltable apparel (ie: metallic helmets, armor) upon hauling them.\n\nHowever, the amount of tainted non-smeltable apparel (ie: tainted cloth/leather t-shirts, hats, pants) that drops can be configured.\n\nThis setting is for those who would rather not deal with tons of useless tainted clothes after every battle!</AutoStripOnHaul_SettingsDescription>
+  <AutoStripOnHaul_NonsmeltableApparelToDrop>Maximum Tainted Non-Smeltable Apparel to Drop</AutoStripOnHaul_NonsmeltableApparelToDrop>
+  <AutoStripOnHaul_DropAll>All</AutoStripOnHaul_DropAll>
+  <AutoStripOnHaul_SettingsDescriptionTwo>Note: At settings lower than "All", tainted non-smeltable apparel over the specified amount will be auto-magically destroyed upon haul.</AutoStripOnHaul_SettingsDescriptionTwo>
+  <AutoStripOnHaul_ResetAll>Reset All</AutoStripOnHaul_ResetAll>
+</LanguageData>
