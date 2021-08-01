@@ -49,6 +49,7 @@
     <Compile Include="Source\AutoStripOnHaul.cs" />
     <Compile Include="Source\Settings\Settings.cs" />
     <Compile Include="Source\Patches\Pawn_CarryTracker_TryStartCarry.cs" />
+    <Compile Include="Source\Settings\SettingsData.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="1.3\Assemblies\AutoStripOnHaul.dll" />

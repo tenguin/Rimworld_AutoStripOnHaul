@@ -4,11 +4,13 @@
   <author>Fuu Chan</author>
   <packageId>Fuu.AutoStripOnHaul</packageId>
   <description>
-Your colonists will automatically strip corpses of their weapons, useable equipment (ie: belts, grenades, utility), and smeltable apparel (ie: metallic helmets, armor) upon hauling them.
+Your colonists will automatically strip corpses of their weapons, equipment, and apparel upon hauling them.
 
-Ideal for scavenger or cannibal colonies that don't want to manually assign strip orders after every battle!
+Ideal for scavenger or cannibal colonies who don't want to manually assign strip orders after every battle!
 
-The amount of tainted non-smeltable apparel (ie: tainted cloth/leather t-shirts, hats, pants) stripped can be optionally configured as well. For those who would rather not deal with tons of useless tainted clothes after every battle!
+Tainted apparel (smeltable and non-smeltable separate) can be configured to be auto-forbidden, or auto-magically destroyed upon haul as well!
+
+This is for those who would rather not deal with tons of useless tainted clothes after every battle!
 
 *Optimized for performance.
 *Safe to add and remove mid-game.
