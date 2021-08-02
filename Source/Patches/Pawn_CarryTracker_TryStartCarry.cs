@@ -22,7 +22,7 @@ namespace AutoStripOnHaul
             {
                 if (corpse.InnerPawn.equipment != null)
                 {
-                    corpse.InnerPawn.equipment.DropAllEquipment(corpse.PositionHeld, forbid: false);
+                    corpse.InnerPawn.equipment.DropAllEquipment(corpse.PositionHeld, forbid: Settings.ForbidEquipment);
                 }
                 if (corpse.InnerPawn.inventory != null)
                 {
@@ -30,13 +30,13 @@ namespace AutoStripOnHaul
                 }
                 if (corpse.InnerPawn.apparel != null)
                 {
-                    DropAllApparel(corpse.InnerPawn.apparel, corpse.PositionHeld, forbid: false, corpse.InnerPawn.Destroyed);
+                    DropAllApparel(corpse.InnerPawn.apparel, corpse.PositionHeld, corpse.InnerPawn.Destroyed);
                 }
             }
         }
 
         //Drops all smeltable apparel & a configurable amount of non-smeltable apparel
-        private static void DropAllApparel(Pawn_ApparelTracker apparelTracker, IntVec3 pos, bool forbid = true, bool dropLocked = true)
+        private static void DropAllApparel(Pawn_ApparelTracker apparelTracker, IntVec3 pos, bool dropLocked = true)
         {
             int nonsmeltablesDropped = 0;
             int smeltablesDropped = 0;
@@ -63,15 +63,19 @@ namespace AutoStripOnHaul
                 }
             }
             for (int j = 0; j < dropList.Count; j++)
-            {
+            {                
                 if ((Settings.ForbidTaintedNonSmeltables && !dropList[j].Smeltable && dropList[j].WornByCorpse) ||
                     (Settings.ForbidTaintedSmeltables && dropList[j].Smeltable && dropList[j].WornByCorpse))
                 {
-                    apparelTracker.TryDrop(dropList[j], out Apparel _, pos, true);
+                    apparelTracker.TryDrop(dropList[j], out Apparel _, pos, forbid: true);
+                }
+                else if (Settings.ForbidEquipment && !dropList[j].WornByCorpse)
+                {
+                    apparelTracker.TryDrop(dropList[j], out Apparel _, pos, forbid: true);
                 }
                 else
                 {
-                    apparelTracker.TryDrop(dropList[j], out Apparel _, pos, forbid);
+                    apparelTracker.TryDrop(dropList[j], out Apparel _, pos, forbid: false);
                 }
             }
             apparelTracker.DestroyAll(); //Destroy remaining unwanted non-smeltables

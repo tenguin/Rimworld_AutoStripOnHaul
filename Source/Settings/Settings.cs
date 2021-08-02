@@ -44,6 +44,7 @@ namespace AutoStripOnHaul
             //Forbid Checkboxes
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedSmeltables".Translate() + ":", ref forbidTaintedSmeltables);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedNonSmeltables".Translate() + ":", ref forbidTaintedNonSmeltables);
+            listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidEquipment".Translate() + ":", ref forbidEquipment);
 
             listingStandard.Gap(15f);
             listingStandard.Label("AutoStripOnHaul_SettingsDescriptionThree".Translate());
