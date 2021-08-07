@@ -10,12 +10,14 @@ namespace AutoStripOnHaul
         public static bool ForbidTaintedSmeltables => forbidTaintedSmeltables;
         public static bool ForbidTaintedNonSmeltables => forbidTaintedNonSmeltables;
         public static bool ForbidEquipment => forbidEquipment;
+        public static bool StripAfterHaul => stripAfterHaul;
 
         private static int smeltableApparelToDrop;
         private static int nonsmeltableApparelToDrop;
         private static bool forbidTaintedSmeltables;
         private static bool forbidTaintedNonSmeltables;
         private static bool forbidEquipment;
+        private static bool stripAfterHaul;
         private static void Initialize()
         {
             smeltableApparelToDrop = DropAll;
@@ -23,6 +25,7 @@ namespace AutoStripOnHaul
             forbidTaintedSmeltables = false;
             forbidTaintedNonSmeltables = true;
             forbidEquipment = false;
+            stripAfterHaul = false;
         }
         public override void ExposeData()
         {
@@ -32,6 +35,7 @@ namespace AutoStripOnHaul
             Scribe_Values.Look(ref forbidTaintedSmeltables, "ForbidTaintedSmeltables", false);
             Scribe_Values.Look(ref forbidTaintedNonSmeltables, "ForbidTaintedNonSmeltables", true);
             Scribe_Values.Look(ref forbidEquipment, "ForbidEquipment", false);
+            Scribe_Values.Look(ref stripAfterHaul, "StripAfterHaul", false);
         }
         public Settings()
         {

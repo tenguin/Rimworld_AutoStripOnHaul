@@ -17,6 +17,7 @@ namespace AutoStripOnHaul
             listingStandard.Label("AutoStripOnHaul_SettingsDescription".Translate());
             listingStandard.Gap(15f);
             listingStandard.Label("AutoStripOnHaul_SettingsDescriptionTwo".Translate());
+            listingStandard.Gap(15f);
 
             //Smeltable Drop Slider
             if (smeltableApparelToDrop == DropAll)
@@ -40,14 +41,27 @@ namespace AutoStripOnHaul
             }
             nonsmeltableApparelToDrop = Mathf.RoundToInt(listingStandard.Slider(nonsmeltableApparelToDrop, 0, DropAll));
 
+            //Warning Notice
+            if(nonsmeltableApparelToDrop != DropAll || smeltableApparelToDrop != DropAll)
+            {
+                listingStandard.Label("AutoStripOnHaul_SettingsDescriptionThree".Translate());
+            }
+            else
+            {
+                listingStandard.Gap(24f);
+            }
+
 
             //Forbid Checkboxes
+            listingStandard.Gap(30f);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedSmeltables".Translate() + ":", ref forbidTaintedSmeltables);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedNonSmeltables".Translate() + ":", ref forbidTaintedNonSmeltables);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidEquipment".Translate() + ":", ref forbidEquipment);
 
+            //Drop On/After Haul
             listingStandard.Gap(15f);
-            listingStandard.Label("AutoStripOnHaul_SettingsDescriptionThree".Translate());
+            listingStandard.CheckboxLabeled("AutoStripOnHaul_StripAfterHaul".Translate() + ":", ref stripAfterHaul);
+
 
             listingStandard.Gap(170f);
             if (listingStandard.ButtonText("AutoStripOnHaul_ResetAll".Translate()))
