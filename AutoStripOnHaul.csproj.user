@@ -3,4 +3,7 @@
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
   </PropertyGroup>
+  <PropertyGroup>
+    <ReferencePath>C:\Games\RimWorld\RimWorldWin64_Data\Managed\</ReferencePath>
+  </PropertyGroup>
 </Project>

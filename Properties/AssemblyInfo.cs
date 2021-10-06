@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("NewModTemplate")]
+[assembly: AssemblyTitle("[Fuu] Auto Strip on Haul")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NewModTemplate")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyProduct("[Fuu] Auto Strip on Haul")]
+[assembly: AssemblyCopyright("Copyright © 2021-present Daniel Yeung")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
