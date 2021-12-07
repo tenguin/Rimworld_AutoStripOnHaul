@@ -22,7 +22,7 @@ namespace AutoStripOnHaul
                 }
                 if (corpse.InnerPawn.inventory != null)
                 {
-                    corpse.InnerPawn.inventory.DropAllNearPawn(corpse.PositionHeld);
+                    corpse.InnerPawn.inventory.DropAllNearPawn(corpse.PositionHeld, forbid: Settings.ForbidInventory);
                 }
                 if (corpse.InnerPawn.apparel != null)
                 {

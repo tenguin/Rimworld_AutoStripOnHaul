@@ -8,6 +8,7 @@
   <AutoStripOnHaul_ForbidTaintedSmeltables>Auto-Forbid Tainted Smeltables</AutoStripOnHaul_ForbidTaintedSmeltables>
   <AutoStripOnHaul_ForbidTaintedNonSmeltables>Auto-Forbid Tainted Non-Smeltables</AutoStripOnHaul_ForbidTaintedNonSmeltables>
   <AutoStripOnHaul_ForbidEquipment>Auto-Forbid Equipment</AutoStripOnHaul_ForbidEquipment>
+  <AutoStripOnHaul_ForbidInventory>Auto-Forbid Inventory (If Outside Home Area)</AutoStripOnHaul_ForbidInventory>
   <AutoStripOnHaul_StripAfterHaul>Strip After Haul (Instead of Before Haul)</AutoStripOnHaul_StripAfterHaul>
   <AutoStripOnHaul_DropAll>All</AutoStripOnHaul_DropAll>
   <AutoStripOnHaul_SettingsDescriptionThree>Note: At settings lower than "All", tainted apparel over the specified amount will be auto-magically destroyed upon haul!</AutoStripOnHaul_SettingsDescriptionThree>
