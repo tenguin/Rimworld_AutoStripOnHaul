@@ -4,7 +4,7 @@
   <author>Fuu Chan</author>
   <packageId>Fuu.AutoStripOnHaul</packageId>
   <description>
-Your colonists will automatically strip corpses of their weapons, equipment, and apparel upon hauling them.
+Your colonists will automatically strip corpses of their weapons, equipment, inventory, and apparel upon hauling them.
 
 Ideal for scavenger or cannibal colonies who don't want to manually assign strip orders after every battle!
 
@@ -16,6 +16,9 @@ For those who would rather not deal with tons of useless tainted clothes after e
 *Safe to add and remove mid-game.
 *CE compatible.
 *No conflicts since this is an independent feature addition.
+
+~1.4 update:
+Added auto-forbid inventory option, which should be useful for mods that keep items on pawns after death and for Simple Sidearms that puts extra weapons into the inventory.
 
 ~1.3 update:
 Added strip after haul option.
