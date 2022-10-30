@@ -64,7 +64,7 @@ namespace AutoStripOnHaul
             listingStandard.CheckboxLabeled("AutoStripOnHaul_StripAfterHaul".Translate() + ":", ref stripAfterHaul);
 
 
-            listingStandard.Gap(170f);
+            listingStandard.Gap(120f);
             if (listingStandard.ButtonText("AutoStripOnHaul_ResetAll".Translate()))
             {
                 Initialize();
