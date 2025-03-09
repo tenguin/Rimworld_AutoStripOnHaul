@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>1.4\Assemblies\</OutputPath>
+    <OutputPath>1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -25,14 +25,14 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>1.4\Assemblies\</OutputPath>
+    <OutputPath>1.5\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.2.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Lib.Harmony.2.2.2\lib\net472\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Lib.Harmony.2.3.3\lib\net472\0Harmony.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
@@ -56,6 +56,8 @@
   <ItemGroup>
     <Content Include="1.3\Assemblies\AutoStripOnHaul.dll" />
     <Content Include="1.3\Assemblies\AutoStripOnHaul.pdb" />
+    <Content Include="1.5\Assemblies\AutoStripOnHaul.dll" />
+    <Content Include="1.5\Assemblies\AutoStripOnHaul.pdb" />
     <Content Include="Common\Languages\English\Keyed\TranslationKeys.xml" />
     <Content Include="Common\Patches\Recipes_Cremation.xml" />
     <Content Include="1.4\Assemblies\AutoStripOnHaul.dll" />
@@ -67,6 +69,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"R:\Rimworld Modding Biotech\!MOD TRANSFER.bat"</PostBuildEvent>
+    <PostBuildEvent>"R:\Rimworld Modding Anomaly\!MOD TRANSFER.bat"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -13,20 +13,24 @@ namespace AutoStripOnHaul
                 return;
             }
             Corpse corpse = thing as Corpse;
-            if (corpse?.InnerPawn?.RaceProps != null && corpse.InnerPawn.RaceProps.Humanlike
-                && (corpse?.InnerPawn?.Faction == null || !corpse.InnerPawn.Faction.IsPlayer)) //Don't strip own faction
+            if (corpse?.InnerPawn != null)
             {
-                if (corpse.InnerPawn.equipment != null)
+                Pawn innerPawn = corpse.InnerPawn;
+                if (innerPawn.Faction != null && innerPawn.Faction.IsPlayer) //Don't strip own faction
                 {
-                    corpse.InnerPawn.equipment.DropAllEquipment(corpse.PositionHeld, forbid: Settings.ForbidEquipment);
+                    return;
                 }
-                if (corpse.InnerPawn.inventory != null)
+                if (innerPawn.equipment != null)
                 {
-                    corpse.InnerPawn.inventory.DropAllNearPawn(corpse.PositionHeld, forbid: Settings.ForbidInventory);
+                    innerPawn.equipment.DropAllEquipment(corpse.PositionHeld, forbid: Settings.ForbidEquipment);
                 }
-                if (corpse.InnerPawn.apparel != null)
+                if (innerPawn.inventory != null)
                 {
-                    DropAllApparel(corpse.InnerPawn.apparel, corpse.PositionHeld, corpse.InnerPawn.Destroyed);
+                    innerPawn.inventory.DropAllNearPawn(corpse.PositionHeld, forbid: Settings.ForbidInventory);
+                }
+                if (innerPawn.apparel != null)
+                {
+                    DropAllApparel(innerPawn.apparel, corpse.PositionHeld, innerPawn.Destroyed);
                 }
             }
         }
@@ -74,7 +78,8 @@ namespace AutoStripOnHaul
                     apparelTracker.TryDrop(dropList[j], out Apparel _, pos, forbid: false);
                 }
             }
-            apparelTracker.DestroyAll(); //Destroy remaining unwanted non-smeltables
+            if(Settings.AutoDestroy)
+                apparelTracker.DestroyAll();
         }
     }
 }

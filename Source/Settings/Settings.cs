@@ -41,21 +41,13 @@ namespace AutoStripOnHaul
             }
             nonsmeltableApparelToDrop = Mathf.RoundToInt(listingStandard.Slider(nonsmeltableApparelToDrop, 0, DropAll));
 
-            //Warning Notice
-            if(nonsmeltableApparelToDrop != DropAll || smeltableApparelToDrop != DropAll)
-            {
-                listingStandard.Label("AutoStripOnHaul_SettingsDescriptionThree".Translate());
-            }
-            else
-            {
-                listingStandard.Gap(24f);
-            }
-
-
             //Forbid Checkboxes
-            listingStandard.Gap(30f);
+            listingStandard.Gap(15f);
+            listingStandard.CheckboxLabeled("AutoStripOnHaul_AutoDestroy".Translate() + ":", ref autoDestroy);
+            listingStandard.Gap(15f);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedSmeltables".Translate() + ":", ref forbidTaintedSmeltables);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidTaintedNonSmeltables".Translate() + ":", ref forbidTaintedNonSmeltables);
+            listingStandard.Gap(15f);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidEquipment".Translate() + ":", ref forbidEquipment);
             listingStandard.CheckboxLabeled("AutoStripOnHaul_ForbidInventory".Translate() + ":", ref forbidInventory);
 
